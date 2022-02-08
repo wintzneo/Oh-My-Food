@@ -1,0 +1,49 @@
+.footer {
+    background-color: #353535;
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: $Padding;
+    }
+    
+    &__logo {
+      color: white;
+      font-family: "Shrikhand", "cursive";
+      margin: 0;
+      font-size: 1.2rem;
+      margin-bottom: $Padding;
+    }
+  
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    &__listchild {
+      margin: 0.5rem 0;
+  
+      &:first-child {
+        margin-top: 0;
+      }
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    &__link {
+      color: white;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  
+    &__icon {
+      width: 1.2rem;
+      margin-right: 0.5rem;
+    }
+  }

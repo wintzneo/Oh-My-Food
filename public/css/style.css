@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+body,
+html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+.header {
+  padding: 1rem 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+.header__logo {
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  text-align: center;
+}
+
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__listchild {
+  margin: 0.5rem 0;
+}
+.footer__listchild:first-child {
+  margin-top: 0;
+}
+.footer__listchild:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: none;
+}
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
