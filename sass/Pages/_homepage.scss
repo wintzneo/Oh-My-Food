@@ -99,3 +99,82 @@
     color: #7e7e7e;
   }
 }
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: ($Padding + 1rem) $Padding;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+
+  @media (min-width: 64rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &__img {
+    height: 12rem;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
+  }
+
+  &__badge {
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 50%);
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+  }
+
+  &__footer {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__like {
+    background-color: white !important;
+  }
+}
