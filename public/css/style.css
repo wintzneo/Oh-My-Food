@@ -24,6 +24,23 @@ html {
   text-align: center;
 }
 
+.header--BackArrow {
+  position: relative;
+}
+.header__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  font-size: 1.2rem;
+  color: black;
+  transform: translateY(-50%);
+}
+
 .footer {
   background-color: #353535;
 }
