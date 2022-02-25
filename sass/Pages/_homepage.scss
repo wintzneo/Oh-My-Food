@@ -60,6 +60,11 @@
     display: flex;
     position: relative;
 
+  &:hover {
+    background-color: lighten( $color-primary, 35% );
+    }
+
+
     @media (min-width: 64rem) {
       flex: 1;
       margin: 0;
@@ -97,6 +102,10 @@
   &__icon {
     margin-right: 1rem;
     color: #7e7e7e;
+
+    &:hover {
+     color:$color-primary;
+      }
   }
 }
 

@@ -4,9 +4,8 @@
     font-weight: 500;
     font-size: 1.1rem;
     border-radius: 100px;
-    box-shadow: 0.25rem 0.25rem 10px black;
     color: white;
-    background-color: $color-primary;
+    background: linear-gradient($color-secondary, $color-primary);
   
     &:hover {
       box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);

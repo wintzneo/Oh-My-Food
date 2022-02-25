@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body,
 html {
   margin: 0;
@@ -114,9 +122,8 @@ html {
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 100px;
-  box-shadow: 0.25rem 0.25rem 10px black;
   color: white;
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 .description__btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
@@ -153,6 +160,9 @@ html {
   display: flex;
   position: relative;
 }
+.tutoriel__step:hover {
+  background-color: #f2eafb;
+}
 @media (min-width: 64rem) {
   .tutoriel__step {
     flex: 1;
@@ -186,6 +196,9 @@ html {
 .tutoriel__icon {
   margin-right: 1rem;
   color: #7e7e7e;
+}
+.tutoriel__icon:hover {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -301,13 +314,17 @@ html {
 }
 .menu__btn::before {
   opacity: 0;
+  transition: 0.5s;
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 .menu__like {
+  transition-duration: 0.25s;
   background-color: #f6f6f6;
   position: absolute;
   top: 0;
@@ -317,6 +334,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  mix-blend-mode: lighten;
 }
 .menu__btn:hover .menu__like--noBg {
   opacity: 0;
@@ -344,6 +362,7 @@ html {
   font-weight: normal;
 }
 .submenu__title::after {
+  content: "";
   width: 3rem;
   height: 0.25rem;
   background-color: #99E2D0;
@@ -361,20 +380,27 @@ html {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
   max-width: 100%;
 }
 .menuItem__header {
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   flex: 1;
 }
 .menuItem__title {
   margin: 0;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .menuItem__description {
   margin: 0;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -392,6 +418,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-duration: 0.5s;
 }
 .menuItem:hover .menuItem__confirmation {
   margin-right: -1rem;
@@ -404,6 +431,11 @@ html {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.menuItem:hover .menuItem__wrapIcon {
+  transform: rotate(0);
 }
 .menuItem__icon {
   color: #99E2D0;
@@ -422,9 +454,8 @@ html {
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 100px;
-  box-shadow: 0.25rem 0.25rem 10px black;
   color: white;
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
 }
 .commandBtn:hover {
