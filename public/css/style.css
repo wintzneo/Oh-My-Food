@@ -158,7 +158,16 @@ html {
   border-radius: 1.25rem;
   background-color: #f6f6f6;
   display: flex;
+  align-items: center;
   position: relative;
+  color: black;
+}
+.tutoriel__step__icon {
+  margin-right: 1rem;
+  color: #7e7e7e;
+}
+.tutoriel__step:hover .tutoriel__step__icon {
+  color: #9356DC;
 }
 .tutoriel__step:hover {
   background-color: #f2eafb;
@@ -192,13 +201,6 @@ html {
   color: white;
   position: absolute;
   left: -0.75rem;
-}
-.tutoriel__icon {
-  margin-right: 1rem;
-  color: #7e7e7e;
-}
-.tutoriel__icon:hover {
-  color: #9356DC;
 }
 
 .restaurants {
@@ -439,6 +441,42 @@ html {
 }
 .menuItem__icon {
   color: #99E2D0;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
 }
 
 .wrapBtn {
