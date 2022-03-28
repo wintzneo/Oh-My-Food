@@ -2,10 +2,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 @keyframes itemAppear {
   0% {
-    transform: scale(0);
+    transform: translateY(20px);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes affich-loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes affichage {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader-turn {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(720deg);
   }
 }
 body,
@@ -14,6 +43,68 @@ html {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+.pre-load {
+  background-color: white;
+  animation: affich-loading 2s forwards;
+  animation-delay: 3s;
+}
+.pre-load__loading-message {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  top: 30%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pre-load__loading-message__loading-name {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.5rem;
+}
+.pre-load__loading-message__loading-text {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+}
+
+.loader {
+  animation: loader-turn 1s linear infinite;
+  padding: 2rem;
+  max-width: 60px;
+  width: 100%;
+}
+
+.loader__value {
+  animation: loader-stroke 3s linear infinite;
+  fill: none;
+  stroke-dasharray: 63;
+  stroke-dashoffset: 63;
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+.loader__value:nth-child(1) {
+  stroke: #9356DC;
+}
+.loader__value:nth-child(2) {
+  stroke: #FF79DA;
+  animation-delay: 1s;
+}
+.loader__value:nth-child(3) {
+  stroke: #99E2D0;
+  animation-delay: 2s;
+}
+@keyframes loader-stroke {
+  16.6666666667% {
+    stroke-dashoffset: 0;
+  }
+  33.3333333333%, 100% {
+    stroke-dashoffset: 63;
+  }
 }
 
 .container {
@@ -90,6 +181,14 @@ html {
   margin-right: 0.5rem;
 }
 
+.loading {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation: affichage 5s;
+  width: 100%;
+}
+
 .location {
   display: flex;
   justify-content: center;
@@ -128,6 +227,7 @@ html {
 .description__btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   color: white;
+  filter: brightness(1.15);
 }
 .description__btn a {
   text-decoration: none;
@@ -382,7 +482,7 @@ html {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  animation: itemAppear 0.6s;
+  animation: itemAppear 1500ms 200ms ease-in-out backwards;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
   transform: scale(0);
@@ -499,6 +599,7 @@ html {
 .commandBtn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   color: white;
+  filter: brightness(1.15);
 }
 .commandBtn a {
   text-decoration: none;

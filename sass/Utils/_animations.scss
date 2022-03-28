@@ -1,9 +1,36 @@
 @keyframes itemAppear {
-    0% {
-      transform: scale(0)
-    }
-    100% {
-      transform: scale(1);
-    }
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes affich-loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes affichage{
+  0%{
+      opacity:0;
+  }
+  80%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+@keyframes loader-turn {
+  50% { transform: rotate(180deg) }
+  100% { transform: rotate(720deg) }
+}

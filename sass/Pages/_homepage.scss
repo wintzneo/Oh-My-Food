@@ -1,3 +1,11 @@
+.loading{
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation: affichage 5s;
+  width: 100%;
+}
+
 .location {
   display: flex;
   justify-content: center;
@@ -61,19 +69,19 @@
     align-items: center;
     position: relative;
     color: black;
-    
-  &__icon {
+
+    &__icon {
       margin-right: 1rem;
       color: #7e7e7e;
     }
 
-  &:hover .tutoriel__step__icon{
+    &:hover .tutoriel__step__icon {
       color: $color-primary;
     }
 
-  &:hover{
-    background-color: lighten( $color-primary, 35% );
-  }
+    &:hover {
+      background-color: lighten($color-primary, 35%);
+    }
 
     @media (min-width: 64rem) {
       flex: 1;

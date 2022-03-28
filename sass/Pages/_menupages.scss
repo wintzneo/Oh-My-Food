@@ -117,7 +117,7 @@
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  animation: itemAppear .6s;
+  animation: itemAppear 1500ms 200ms ease-in-out backwards;
   animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
   animation-fill-mode: both;
   transform: scale(0);
